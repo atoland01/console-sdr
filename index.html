@@ -399,6 +399,59 @@
 
   .why-box strong { color: var(--text); font-weight: 600; }
 
+  .source-link {
+    font-family: 'JetBrains Mono', monospace;
+    font-size: 9px;
+    color: var(--accent);
+    text-decoration: none;
+    border: 1px solid rgba(99,219,180,0.25);
+    border-radius: 3px;
+    padding: 1px 5px;
+    margin-left: 3px;
+    vertical-align: super;
+    transition: all 0.15s;
+  }
+
+  .source-link:hover {
+    background: rgba(99,219,180,0.12);
+    border-color: var(--accent);
+  }
+
+  .sources-bar {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 6px;
+    margin-top: 14px;
+    padding-top: 12px;
+    border-top: 1px solid var(--border);
+  }
+
+  .sources-bar .src-label {
+    font-family: 'JetBrains Mono', monospace;
+    font-size: 9px;
+    color: var(--text-dim);
+    text-transform: uppercase;
+    letter-spacing: 0.08em;
+    align-self: center;
+    margin-right: 4px;
+  }
+
+  .sources-bar a {
+    font-family: 'JetBrains Mono', monospace;
+    font-size: 10px;
+    color: var(--text-muted);
+    text-decoration: none;
+    border: 1px solid var(--border);
+    border-radius: 4px;
+    padding: 3px 8px;
+    transition: all 0.15s;
+  }
+
+  .sources-bar a:hover {
+    color: var(--accent);
+    border-color: rgba(99,219,180,0.3);
+  }
+
   /* CONTACTS */
   .contacts-grid {
     display: grid;
@@ -439,6 +492,32 @@
     font-weight: 700;
     color: var(--text);
     margin-bottom: 3px;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+  }
+
+  .li-link {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 18px;
+    height: 18px;
+    border-radius: 4px;
+    background: rgba(10,102,194,0.2);
+    border: 1px solid rgba(79,195,247,0.2);
+    color: #4fc3f7;
+    font-size: 10px;
+    font-family: 'JetBrains Mono', monospace;
+    font-weight: 700;
+    text-decoration: none;
+    flex-shrink: 0;
+    transition: all 0.15s;
+  }
+
+  .li-link:hover {
+    background: rgba(10,102,194,0.4);
+    border-color: #4fc3f7;
   }
 
   .contact-info .contact-title {
@@ -846,7 +925,7 @@
             <div class="method-card">
               <div class="mth-icon">✉️</div>
               <div class="mth-title">Proof-Led Messaging</div>
-              <div class="mth-desc">Every sequence references real Console case studies (Scale AI, Webflow, Bloomerang) with specific metrics — not generic positioning.</div>
+              <div class="mth-desc">Every sequence references real Console case studies (<a href="https://www.console.com/customers/scale-ai" target="_blank" style="color:var(--accent);text-decoration:none;border-bottom:1px solid rgba(99,219,180,0.3);">Scale AI</a>, <a href="https://www.console.com/customers/webflow" target="_blank" style="color:var(--accent);text-decoration:none;border-bottom:1px solid rgba(99,219,180,0.3);">Webflow</a>, <a href="https://www.console.com/customers/bloomerang" target="_blank" style="color:var(--accent);text-decoration:none;border-bottom:1px solid rgba(99,219,180,0.3);">Bloomerang</a>) with specific metrics — not generic positioning.</div>
             </div>
           </div>
         </div>
@@ -914,7 +993,8 @@
 
         <div class="section-block">
           <div class="section-title">Why This Account, Why Now</div>
-          <div class="why-box">Jamf is a <strong>confirmed Moveworks customer</strong> — 70% of their employees actively use the Moveworks AI assistant for internal IT support. In December 2025, ServiceNow completed its $2.85 billion acquisition of Moveworks. As an Apple-first, modern-stack company, Jamf is culturally aligned with Slack-native, lightweight tooling — <strong>not enterprise ITSM platforms like ServiceNow</strong>.<br><br>The acquisition creates a live buying window. Moveworks' roadmap will inevitably tilt toward ServiceNow's ecosystem, and non-ServiceNow customers like Jamf face uncertainty about integration support, feature investment, and long-term viability. <strong>Console's positioning is direct:</strong> an AI-native IT agent that resolves tickets end-to-end in Slack, without tethering to any legacy ITSM platform. This is a displacement play against an incumbent being absorbed.</div>
+          <div class="why-box">Jamf is a <strong>confirmed Moveworks customer</strong> — 70% of their employees actively use the Moveworks AI assistant for internal IT support.<a href="https://www.moveworks.com/us/en/customers/jamf-employees-use-moveworks-ai-powered-support" target="_blank" class="source-link">src</a> In December 2025, ServiceNow completed its $2.85 billion acquisition of Moveworks.<a href="https://techcrunch.com/2025/03/10/servicenow-buys-moveworks-for-2-85b-to-grow-its-ai-portfolio/" target="_blank" class="source-link">src</a> As an Apple-first, modern-stack company, Jamf is culturally aligned with Slack-native, lightweight tooling — <strong>not enterprise ITSM platforms like ServiceNow</strong>.<br><br>The acquisition creates a live buying window. Moveworks' roadmap will inevitably tilt toward ServiceNow's ecosystem, and non-ServiceNow customers like Jamf face uncertainty about integration support, feature investment, and long-term viability. <strong>Console's positioning is direct:</strong> an AI-native IT agent that resolves tickets end-to-end in Slack, without tethering to any legacy ITSM platform. This is a displacement play against an incumbent being absorbed.
+            <div class="sources-bar"><span class="src-label">Sources:</span><a href="https://www.moveworks.com/us/en/customers/jamf-employees-use-moveworks-ai-powered-support" target="_blank">Moveworks — Jamf Case Study</a><a href="https://techcrunch.com/2025/03/10/servicenow-buys-moveworks-for-2-85b-to-grow-its-ai-portfolio/" target="_blank">TechCrunch — $2.85B Acquisition</a><a href="https://www.moveworks.com/us/en/company/news/press-releases/servicenow-completes-acquisition-of-moveworks" target="_blank">Moveworks — Acquisition Completion</a></div></div>
         </div>
 
         <div class="section-block">
@@ -923,7 +1003,7 @@
             <div class="contact-card">
               <div class="contact-avatar">JF</div>
               <div class="contact-info">
-                <div class="contact-name">Jason Flackley</div>
+                <div class="contact-name">Jason Flackey <a href="https://www.linkedin.com/in/jason-flackey-1bb5688a/" target="_blank" class="li-link">in</a></div>
                 <div class="contact-title">Sr. Director, IT Enterprise Apps & Collaboration Engineering</div>
                 <div class="contact-role-desc">Champion / internal advocate — leads AI adoption strategy including Agentic AI; owns collaboration platforms and employee productivity tooling.</div>
               </div>
@@ -932,7 +1012,7 @@
             <div class="contact-card">
               <div class="contact-avatar">LL</div>
               <div class="contact-info">
-                <div class="contact-name">Linh Lam</div>
+                <div class="contact-name">Linh Lam <a href="https://www.linkedin.com/in/lamlinh" target="_blank" class="li-link">in</a></div>
                 <div class="contact-title">CIO</div>
                 <div class="contact-role-desc">Economic buyer / decision maker — owns IT strategy and budget. Primary escalation path if champion goes cold.</div>
               </div>
@@ -941,7 +1021,7 @@
             <div class="contact-card">
               <div class="contact-avatar">MV</div>
               <div class="contact-info">
-                <div class="contact-name">Mario Villatoro</div>
+                <div class="contact-name">Mario Villatoro <a href="https://www.linkedin.com/in/mariovillatoro/" target="_blank" class="li-link">in</a></div>
                 <div class="contact-title">CISO</div>
                 <div class="contact-role-desc">Side door — security angle: reducing manual access grants and password resets shrinks the attack surface. Different value prop, same product.</div>
               </div>
@@ -953,7 +1033,7 @@
         <div class="section-block">
           <div class="section-title">2-Week Outreach Sequence</div>
           <div class="sequence-tabs">
-            <div class="seq-tab active" onclick="showSeq('jamf', 'champion', this)">Jason Flackley (Champion · 6 touches)</div>
+            <div class="seq-tab active" onclick="showSeq('jamf', 'champion', this)">Jason Flackey (Champion · 6 touches)</div>
             <div class="seq-tab" onclick="showSeq('jamf', 'sidedoor', this)">Mario Villatoro (Side Door · 3 touches)</div>
             <div class="seq-tab" onclick="showSeq('jamf', 'economic', this)">Linh Lam (Economic Buyer · 3 touches)</div>
           </div>
@@ -964,14 +1044,20 @@
                 <div class="touch-day"><span class="day-num">1</span><span class="day-label">Day</span></div>
                 <div class="touch-content">
                   <div class="touch-header"><span class="touch-channel ch-linkedin">LinkedIn</span><span class="touch-type">Connection Request</span></div>
-                  <div class="touch-msg">Jason — I'm researching how IT teams at Apple-first companies are thinking about Agentic AI for internal support. Noticed your mandate at Jamf covers exactly this. Would love to connect.</div>
+                  <div class="touch-msg">Jason — Jamf's Moveworks setup is now inside ServiceNow. That creates a real question for non-ServiceNow shops. I work with Console, an AI-native alternative. Thought it'd be worth connecting.</div>
                 </div>
               </div>
               <div class="touch-item">
                 <div class="touch-day"><span class="day-num">2</span><span class="day-label">Day</span></div>
                 <div class="touch-content">
                   <div class="touch-header"><span class="touch-channel ch-email">Email</span><span class="touch-type">Cold Email #1</span></div>
-                  <div class="touch-msg"><span class="subject">Subject: Agentic AI for Jamf's IT</span>Jason — I noticed your role at Jamf includes AI adoption strategy, specifically Agentic AI. Console is an AI agent that lives in Slack and resolves IT requests autonomously — password resets, access grants, tool provisioning. No ticket, no queue, no wait. Scale AI's 7-person IT team went from 15% to 57% automation within 30 days. With Moveworks now part of ServiceNow, it might be worth seeing what an AI-native alternative looks like — one that isn't tethered to ServiceNow's roadmap. Worth 15 minutes? Adam</div>
+                  <div class="touch-msg"><span class="subject">Subject: Jamf's Moveworks instance is now ServiceNow's</span>Jason — Moveworks closed inside ServiceNow in December. If Jamf isn't on ServiceNow's ITSM platform, the roadmap just shifted against you — integration priorities, feature investment, and support resources are all going to tilt toward ServiceNow's own ecosystem over the next 12 months.
+
+Console is the alternative that doesn't require you to pick a side. AI agent, lives in Slack, resolves IT requests end-to-end. Scale AI went from 15% to 57% ticket automation in 30 days after switching from a competitor.
+
+Is the Moveworks transition something your team is actively planning for, or are you waiting to see how ServiceNow handles non-ServiceNow customers?
+
+Adam</div>
                 </div>
               </div>
               <div class="touch-item">
@@ -1037,21 +1123,27 @@
                 <div class="touch-day"><span class="day-num">5</span><span class="day-label">Day</span></div>
                 <div class="touch-content">
                   <div class="touch-header"><span class="touch-channel ch-linkedin">LinkedIn</span><span class="touch-type">Connection Request</span></div>
-                  <div class="touch-msg">Linh — I'm reaching out to IT leaders at companies currently on Moveworks. With the ServiceNow acquisition, I think there's a conversation worth having about Console — an AI-native alternative built for Slack-first companies. Would love to connect.</div>
+                  <div class="touch-msg">Linh — Moveworks is now ServiceNow. For a Slack-first company like Jamf, that raises a real question about what happens to the product roadmap. Console is an AI-native IT agent built for exactly this scenario — no ITSM dependency. Worth connecting.</div>
                 </div>
               </div>
               <div class="touch-item">
                 <div class="touch-day"><span class="day-num">9</span><span class="day-label">Day</span></div>
                 <div class="touch-content">
                   <div class="touch-header"><span class="touch-channel ch-email">Email</span><span class="touch-type">Email #1</span></div>
-                  <div class="touch-msg"><span class="subject">Subject: Console — relevant given Jamf's Moveworks position</span>Linh — with Moveworks now part of ServiceNow, Jamf is in a position a lot of IT leaders are navigating right now: do you wait to see how the roadmap shifts, or do you evaluate alternatives while you have the time? Console is an AI-native IT agent that lives in Slack and resolves requests end-to-end — no ServiceNow dependency. Companies like Scale AI and Webflow see 50–80% ticket deflection and absorb headcount growth without scaling IT linearly. Would it make sense to connect for 15 minutes? Adam</div>
+                  <div class="touch-msg"><span class="subject">Subject: Jamf's Moveworks position post-acquisition</span>Linh — with Moveworks now inside ServiceNow, Jamf is in a position a lot of IT leaders are navigating right now: do you wait to see how the roadmap shifts, or evaluate alternatives while you have leverage?
+
+Console is an AI-native IT agent — lives in Slack, resolves requests end-to-end, no ITSM dependency. Scale AI and Webflow see 50–80% ticket deflection and absorb headcount growth without scaling IT linearly.
+
+Has your team started evaluating alternatives, or is the current setup still working well enough?
+
+Adam</div>
                 </div>
               </div>
               <div class="touch-item">
                 <div class="touch-day"><span class="day-num">12</span><span class="day-label">Day</span></div>
                 <div class="touch-content">
                   <div class="touch-header"><span class="touch-channel ch-email">Email</span><span class="touch-type">Follow-Up</span></div>
-                  <div class="touch-msg"><span class="subject">Subject: Re: Console — relevant given Jamf's Moveworks position</span>Linh — brief follow-up. One stat that resonated with other CIOs: Bloomerang's VP of IT saw 50–60% ticket deflection and zero new IT hires despite 20% org growth. His words: "I didn't think it was possible to automate 50% of our tickets. But here we are." Happy to set up 15 minutes whenever it makes sense. Adam</div>
+                  <div class="touch-msg"><span class="subject">Subject: Re: Console — relevant given Jamf's Moveworks position</span>Linh — brief follow-up. One stat that resonated with other CIOs: Bloomerang's VP of IT saw 60% ticket deflection and zero new IT hires despite 20% org growth. His words: "I didn't think it was possible to automate 50% of our tickets. But here we are." Happy to set up 15 minutes whenever it makes sense. Adam</div>
                 </div>
               </div>
             </div>
@@ -1078,7 +1170,8 @@
         </div>
         <div class="section-block">
           <div class="section-title">Why This Account, Why Now</div>
-          <div class="why-box">Vanta's customer base <strong>tripled from 4,000 to 12,000 in two years</strong>. When a company grows this fast, internal IT doesn't scale proportionally — the Enterprise Engineering team is handling identity and access management, SaaS application oversight, device provisioning, and end-user support for a workforce expanding month over month.<br><br><strong>Vanta sells trust.</strong> Their product helps other companies prove compliance. Their internal IT operations should reflect that same standard — and an AI agent that resolves access requests and provisions tools autonomously, with full audit logging, is a natural extension of the compliance-first culture they've built.</div>
+          <div class="why-box">Vanta's customer base <strong>tripled from 4,000 to 12,000 in two years</strong>.<a href="https://sacra.com/c/vanta/" target="_blank" class="source-link">src</a> When a company grows this fast, internal IT doesn't scale proportionally — the Enterprise Engineering team is handling identity and access management, SaaS application oversight, device provisioning, and end-user support for a workforce expanding month over month.<br><br><strong>Vanta sells trust.</strong> Their product helps other companies prove compliance. Their internal IT operations should reflect that same standard — and an AI agent that resolves access requests and provisions tools autonomously, with full audit logging, is a natural extension of the compliance-first culture they've built.
+            <div class="sources-bar"><span class="src-label">Sources:</span><a href="https://sacra.com/c/vanta/" target="_blank">Sacra — Vanta Revenue & Growth</a><a href="https://www.vanta.com/resources/vanta-enterprise-engineering-team" target="_blank">Vanta — Enterprise Engineering Team</a></div></div>
         </div>
         <div class="section-block">
           <div class="section-title">Target Contacts</div>
@@ -1086,7 +1179,7 @@
             <div class="contact-card">
               <div class="contact-avatar">AP</div>
               <div class="contact-info">
-                <div class="contact-name">Alicia Phan</div>
+                <div class="contact-name">Alicia Phan <a href="https://www.linkedin.com/in/aliciacphan/" target="_blank" class="li-link">in</a></div>
                 <div class="contact-title">Enterprise Engineering Manager</div>
                 <div class="contact-role-desc">Champion — leads IT ops, corporate systems, identity/access management, SaaS oversight.</div>
               </div>
@@ -1095,7 +1188,7 @@
             <div class="contact-card">
               <div class="contact-avatar">JH</div>
               <div class="contact-info">
-                <div class="contact-name">Jadee Hanson</div>
+                <div class="contact-name">Jadee Hanson <a href="https://www.linkedin.com/in/jadee-hanson-668225b/" target="_blank" class="li-link">in</a></div>
                 <div class="contact-title">CISO</div>
                 <div class="contact-role-desc">Economic buyer / decision maker — oversees the entire ESP org including enterprise engineering and IT.</div>
               </div>
@@ -1104,8 +1197,8 @@
             <div class="contact-card">
               <div class="contact-avatar">IS</div>
               <div class="contact-info">
-                <div class="contact-name">Iccha Sethi</div>
-                <div class="contact-title">SVP of Engineering</div>
+                <div class="contact-name">Iccha Sethi <a href="https://www.linkedin.com/in/icchasethi/" target="_blank" class="li-link">in</a></div>
+                <div class="contact-title">VP of Engineering</div>
                 <div class="contact-role-desc">Side door — engineering leaders care about onboarding speed. New engineers waiting for access = lost velocity.</div>
               </div>
               <span class="contact-role-tag tag-side-door">Side Door</span>
@@ -1121,8 +1214,16 @@
           </div>
           <div id="vanta-champion" class="seq-panel active">
             <div class="touch-list">
-              <div class="touch-item"><div class="touch-day"><span class="day-num">1</span><span class="day-label">Day</span></div><div class="touch-content"><div class="touch-header"><span class="touch-channel ch-linkedin">LinkedIn</span><span class="touch-type">Connection Request</span></div><div class="touch-msg">Alicia — I came across your Enterprise Engineering role at Vanta. Managing IT ops and identity/access for a company growing this fast is no small thing. I work with a product that's directly relevant to what you're building — would love to connect.</div></div></div>
-              <div class="touch-item"><div class="touch-day"><span class="day-num">2</span><span class="day-label">Day</span></div><div class="touch-content"><div class="touch-header"><span class="touch-channel ch-email">Email</span><span class="touch-type">Cold Email #1</span></div><div class="touch-msg"><span class="subject">Subject: IT at Vanta's growth rate</span>Alicia — when a company's customer base triples in two years, the IT team is building the plane while flying it. Console is an AI agent that lives in Slack and resolves IT requests autonomously — access grants, tool provisioning, password resets. Bloomerang saw 50–60% ticket deflection and zero new IT hires despite 20% org growth. Worth 15 minutes to see if it's relevant to what you're managing? Adam</div></div></div>
+              <div class="touch-item"><div class="touch-day"><span class="day-num">1</span><span class="day-label">Day</span></div><div class="touch-content"><div class="touch-header"><span class="touch-channel ch-linkedin">LinkedIn</span><span class="touch-type">Connection Request</span></div><div class="touch-msg">Alicia — Vanta has tripled its customer base and is adding hundreds of employees. That puts real pressure on the Enterprise Engineering team to keep up with access management, provisioning, and compliance. I work with Console — we help companies at exactly this stage. Worth connecting.</div></div></div>
+              <div class="touch-item"><div class="touch-day"><span class="day-num">2</span><span class="day-label">Day</span></div><div class="touch-content"><div class="touch-header"><span class="touch-channel ch-email">Email</span><span class="touch-type">Cold Email #1</span></div><div class="touch-msg"><span class="subject">Subject: IT at Vanta's growth rate</span>Alicia — Vanta tripled its customer base in two years. That kind of growth means every week there are new employees who need tool access, device provisioning, and identity management — and the Enterprise Engineering team absorbs most of that demand without proportional headcount.
+
+The question is whether that's sustainable at the next stage of growth, or whether the manual work starts compounding.
+
+Console automates 60% of those requests in Slack — access grants, password resets, tool provisioning — with full audit logging. Bloomerang's IT team absorbed 20% org growth with zero new hires after implementation.
+
+Is your team feeling the scaling pressure yet, or is the current setup holding?
+
+Adam</div></div></div>
               <div class="touch-item"><div class="touch-day"><span class="day-num">4</span><span class="day-label">Day</span></div><div class="touch-content"><div class="touch-header"><span class="touch-channel ch-linkedin">LinkedIn</span><span class="touch-type">Engagement</span></div><div class="touch-action">Engage with Alicia's content. Build visibility. No pitch.</div></div></div>
               <div class="touch-item"><div class="touch-day"><span class="day-num">6</span><span class="day-label">Day</span></div><div class="touch-content"><div class="touch-header"><span class="touch-channel ch-email">Email</span><span class="touch-type">Follow-Up #2</span></div><div class="touch-msg"><span class="subject">Subject: Re: IT at Vanta's growth rate</span>Alicia — one follow-up. Scale AI's Head of IT went from 15% to 57% ticket automation in 30 days. They added only 1 IT hire despite 350+ employee growth. He said the deciding factor was finding a tool that could work in production, not just demo well. Given where Vanta is right now, I think it's worth a look. 15 minutes? Adam</div></div></div>
               <div class="touch-item"><div class="touch-day"><span class="day-num">8</span><span class="day-label">Day</span></div><div class="touch-content"><div class="touch-header"><span class="touch-channel ch-call">Phone</span><span class="touch-type">Cold Call</span></div><div class="touch-action">Reference the emails. Direct: "I sent you a couple of notes about Console and IT automation. Given Vanta's growth, thought it was worth a quick call — is now a bad time?"</div></div></div>
@@ -1138,9 +1239,9 @@
           </div>
           <div id="vanta-economic" class="seq-panel">
             <div class="touch-list">
-              <div class="touch-item"><div class="touch-day"><span class="day-num">5</span><span class="day-label">Day</span></div><div class="touch-content"><div class="touch-header"><span class="touch-channel ch-linkedin">LinkedIn</span><span class="touch-type">Connection Request</span></div><div class="touch-msg">Jadee — I work with IT leaders at high-growth security companies. Console is an AI agent that resolves IT requests autonomously in Slack — with SOC 2 compliance and full audit logging baked in. Given Vanta's growth, thought it would be worth connecting.</div></div></div>
+              <div class="touch-item"><div class="touch-day"><span class="day-num">5</span><span class="day-label">Day</span></div><div class="touch-content"><div class="touch-header"><span class="touch-channel ch-linkedin">LinkedIn</span><span class="touch-type">Connection Request</span></div><div class="touch-msg">Jadee — when a security company triples its customer base, internal IT ops need to match the standard you sell externally. Console automates IT requests in Slack with SOC 2 compliance and full audit logging. Given Vanta's growth trajectory, thought it'd be relevant.</div></div></div>
               <div class="touch-item"><div class="touch-day"><span class="day-num">9</span><span class="day-label">Day</span></div><div class="touch-content"><div class="touch-header"><span class="touch-channel ch-email">Email</span><span class="touch-type">Email #1</span></div><div class="touch-msg"><span class="subject">Subject: Console for Vanta's ESP org</span>Jadee — your ESP team is managing IT operations, security, and compliance for a company that's tripled its customer base in two years. Console automates 50–80% of internal IT requests in Slack — with full audit logging and SOC 2 compliance. For a company that sells trust, that alignment matters. Worth 15 minutes? Adam</div></div></div>
-              <div class="touch-item"><div class="touch-day"><span class="day-num">12</span><span class="day-label">Day</span></div><div class="touch-content"><div class="touch-header"><span class="touch-channel ch-email">Email</span><span class="touch-type">Follow-Up</span></div><div class="touch-msg"><span class="subject">Subject: Re: Console for Vanta's ESP org</span>Jadee — brief follow-up. Bloomerang's VP of IT said it best: "Everyone on my team basically got a promotion once we implemented Console." They saw 50–60% ticket deflection and zero new IT hires despite 20% org growth. Happy to set up time whenever it makes sense. Adam</div></div></div>
+              <div class="touch-item"><div class="touch-day"><span class="day-num">12</span><span class="day-label">Day</span></div><div class="touch-content"><div class="touch-header"><span class="touch-channel ch-email">Email</span><span class="touch-type">Follow-Up</span></div><div class="touch-msg"><span class="subject">Subject: Re: Console for Vanta's ESP org</span>Jadee — brief follow-up. Bloomerang's VP of IT said it best: "Everyone on my team basically got a promotion once we implemented Console." They saw 60% ticket deflection and zero new IT hires despite 20% org growth. Happy to set up time whenever it makes sense. Adam</div></div></div>
             </div>
           </div>
         </div>
@@ -1165,7 +1266,8 @@
         </div>
         <div class="section-block">
           <div class="section-title">Why This Account, Why Now</div>
-          <div class="why-box">Two signals converge here. First, the <strong>vertical pattern-match</strong>: Flock Safety is already a Console customer. Verkada operates in the same space — physical security with cloud-native infrastructure — and faces the same internal IT challenges: rapid headcount growth (quadrupled since 2020), a mix of office and warehouse IT complexity, and a modern SaaS stack that generates constant provisioning and access requests.<br><br>Second, the <strong>leadership transition</strong>: Chris Stori was appointed CIO on March 31, 2026 — three weeks ago. His mandate, stated publicly, is to "lead corporate IT strategy, business systems, and the broader technology infrastructure that powers Verkada's operations as we scale globally." A new CIO in their first 90 days is the single most receptive buyer in the market. They're evaluating every tool, every vendor, every process — and they haven't inherited loyalty to any existing solution.</div>
+          <div class="why-box">Two signals converge here. First, the <strong>vertical pattern-match</strong>: Flock Safety is already a Console customer.<a href="https://www.upstartsmedia.com/p/console-ai-for-it-raises-series-a" target="_blank" class="source-link">src</a> Verkada operates in the same space — physical security with cloud-native infrastructure — and faces the same internal IT challenges: rapid headcount growth (quadrupled since 2020), a mix of office and warehouse IT complexity, and a modern SaaS stack that generates constant provisioning and access requests.<br><br>Second, the <strong>leadership transition</strong>: Chris Stori was appointed CIO on March 31, 2026 — three weeks ago.<a href="https://www.prnewswire.com/news-releases/verkada-appoints-chris-stori-as-chief-information-officer-302729332.html" target="_blank" class="source-link">src</a> His mandate, stated publicly, is to "lead corporate IT strategy, business systems, and the broader technology infrastructure that powers Verkada's operations as we scale globally." A new CIO in their first 90 days is the single most receptive buyer in the market. They're evaluating every tool, every vendor, every process — and they haven't inherited loyalty to any existing solution.
+            <div class="sources-bar"><span class="src-label">Sources:</span><a href="https://www.prnewswire.com/news-releases/verkada-appoints-chris-stori-as-chief-information-officer-302729332.html" target="_blank">PRNewswire — CIO Appointment</a><a href="https://www.verkada.com/blog/introducing-chris-stori-verkadas-new-chief-information-officer/" target="_blank">Verkada Blog — Chris Stori</a><a href="https://www.upstartsmedia.com/p/console-ai-for-it-raises-series-a" target="_blank">Upstarts — Console Customers</a></div></div>
         </div>
         <div class="section-block">
           <div class="section-title">Target Contacts</div>
@@ -1173,7 +1275,7 @@
             <div class="contact-card">
               <div class="contact-avatar">CS</div>
               <div class="contact-info">
-                <div class="contact-name">Chris Stori</div>
+                <div class="contact-name">Chris Stori <a href="https://www.verkada.com/blog/introducing-chris-stori-verkadas-new-chief-information-officer/" target="_blank" class="li-link" title="Verkada announcement">↗</a></div>
                 <div class="contact-title">CIO (appointed March 31, 2026)</div>
                 <div class="contact-role-desc">Primary target — champion, economic buyer, and decision maker in his first 90 days. Highest-priority outreach in the entire list.</div>
               </div>
@@ -1182,7 +1284,7 @@
             <div class="contact-card">
               <div class="contact-avatar">KR</div>
               <div class="contact-info">
-                <div class="contact-name">Kyle Randolph</div>
+                <div class="contact-name">Kyle Randolph <a href="https://www.linkedin.com/in/kylerandolph/" target="_blank" class="li-link">in</a></div>
                 <div class="contact-title">CISO</div>
                 <div class="contact-role-desc">Side door — at a security company, the CISO has major influence on internal IT tooling decisions.</div>
               </div>
@@ -1191,7 +1293,7 @@
             <div class="contact-card">
               <div class="contact-avatar">BD</div>
               <div class="contact-info">
-                <div class="contact-name">Brandon Davito</div>
+                <div class="contact-name">Brandon Davito <a href="https://www.linkedin.com/in/brandon-davito-669467/" target="_blank" class="li-link">in</a></div>
                 <div class="contact-title">SVP Product & Operations</div>
                 <div class="contact-role-desc">Side door — operations leadership cares about internal efficiency at scale.</div>
               </div>
@@ -1209,7 +1311,13 @@
           <div id="verkada-champion" class="seq-panel active">
             <div class="touch-list">
               <div class="touch-item"><div class="touch-day"><span class="day-num">1</span><span class="day-label">Day</span></div><div class="touch-content"><div class="touch-header"><span class="touch-channel ch-linkedin">LinkedIn</span><span class="touch-type">Connection Request</span></div><div class="touch-msg">Chris — congrats on the CIO role at Verkada. I work with Console, an AI agent for internal IT that's used by Flock Safety (same vertical, similar scale). Thought it would be worth connecting as you evaluate your stack.</div></div></div>
-              <div class="touch-item"><div class="touch-day"><span class="day-num">2</span><span class="day-label">Day</span></div><div class="touch-content"><div class="touch-header"><span class="touch-channel ch-email">Email</span><span class="touch-type">Cold Email #1</span></div><div class="touch-msg"><span class="subject">Subject: Flock Safety uses this — thought it'd be relevant</span>Chris — congrats on the new role. I'll keep this short. Flock Safety — same vertical, similar scale — uses Console to automate 50%+ of IT tickets in Slack. Their IT team handles growth without scaling headcount linearly. You're in the first weeks of evaluating the stack. Console is worth 15 minutes before you lock anything in. Adam</div></div></div>
+              <div class="touch-item"><div class="touch-day"><span class="day-num">2</span><span class="day-label">Day</span></div><div class="touch-content"><div class="touch-header"><span class="touch-channel ch-email">Email</span><span class="touch-type">Cold Email #1</span></div><div class="touch-msg"><span class="subject">Subject: First 90 days — one tool worth seeing before you lock the stack</span>Chris — you're three weeks into the CIO role at Verkada, which means you're evaluating every tool, vendor, and process you've inherited. Before anything gets locked in:
+
+Flock Safety — same vertical, similar scale — uses Console to automate 50%+ of their IT tickets directly in Slack. Their IT team handles growth without scaling headcount linearly. Verkada has quadrupled since 2020, so the math is directly relevant.
+
+What does IT automation look like in the current stack, or is that still being assessed?
+
+Adam</div></div></div>
               <div class="touch-item"><div class="touch-day"><span class="day-num">4</span><span class="day-label">Day</span></div><div class="touch-content"><div class="touch-header"><span class="touch-channel ch-linkedin">LinkedIn</span><span class="touch-type">Engagement</span></div><div class="touch-action">Engage with Chris's content (likely posting about starting the CIO role). Thoughtful comment — no pitch.</div></div></div>
               <div class="touch-item"><div class="touch-day"><span class="day-num">6</span><span class="day-label">Day</span></div><div class="touch-content"><div class="touch-header"><span class="touch-channel ch-email">Email</span><span class="touch-type">Follow-Up #2</span></div><div class="touch-msg"><span class="subject">Subject: Re: Flock Safety uses this</span>Chris — one more data point. Scale AI's Head of IT went from 15% to 57% ticket automation in 30 days, and added only 1 IT hire despite 350+ employee growth. For a company that quadrupled headcount like Verkada, that math matters. Happy to walk through the case study. 15 minutes this week? Adam</div></div></div>
               <div class="touch-item"><div class="touch-day"><span class="day-num">8</span><span class="day-label">Day</span></div><div class="touch-content"><div class="touch-header"><span class="touch-channel ch-call">Phone</span><span class="touch-type">Cold Call #1</span></div><div class="touch-action">Reference the emails. Direct: "I've sent you a couple of notes about Console. Given where you are in the first 90 days, I think it's worth 15 minutes — is now a bad time?"</div></div></div>
@@ -1253,7 +1361,8 @@
         </div>
         <div class="section-block">
           <div class="section-title">Why This Account, Why Now</div>
-          <div class="why-box">Plaid hit an <strong>$8 billion valuation in February 2026</strong> through a new tender offer, up from $6.1 billion just months earlier. The money is in the bank and the headcount plan is in motion — recently funded companies with active hiring are the ripest outbound targets.<br><br>As fintech infrastructure connecting to every major bank in America, Plaid operates in a security-conscious, compliance-heavy environment. <strong>Every access grant is an audit event.</strong> Every tool provisioning request touches sensitive systems. Console's autonomous resolution with full audit logging is directly relevant to how fintech companies need their internal IT to operate: fast, secure, and documented.</div>
+          <div class="why-box">Plaid hit an <strong>$8 billion valuation in February 2026</strong> through a new tender offer, up from $6.1 billion just months earlier.<a href="https://www.pymnts.com/news/fintech-investments/2026/plaids-valuation-hits-8-billion-in-new-funding-round/" target="_blank" class="source-link">src</a> The money is in the bank and the headcount plan is in motion — recently funded companies with active hiring are the ripest outbound targets.<br><br>As fintech infrastructure connecting to every major bank in America, Plaid operates in a security-conscious, compliance-heavy environment. <strong>Every access grant is an audit event.</strong> Every tool provisioning request touches sensitive systems. Console's autonomous resolution with full audit logging is directly relevant to how fintech companies need their internal IT to operate: fast, secure, and documented.
+            <div class="sources-bar"><span class="src-label">Sources:</span><a href="https://www.pymnts.com/news/fintech-investments/2026/plaids-valuation-hits-8-billion-in-new-funding-round/" target="_blank">PYMNTS — $8B Valuation</a><a href="https://finance.yahoo.com/news/plaid-secures-8-billion-valuation-185005671.html" target="_blank">Yahoo Finance — Funding Round</a></div></div>
         </div>
         <div class="section-block">
           <div class="section-title">Target Contacts</div>
@@ -1261,7 +1370,7 @@
             <div class="contact-card">
               <div class="contact-avatar">DZ</div>
               <div class="contact-info">
-                <div class="contact-name">Diana Zhou</div>
+                <div class="contact-name">Diana Zhou <a href="https://www.linkedin.com/in/zhoudiana/" target="_blank" class="li-link">in</a></div>
                 <div class="contact-title">Head of Eng Ops / Chief of Staff to CTO</div>
                 <div class="contact-role-desc">Champion / internal advocate — eng ops leaders care about onboarding speed, tool provisioning, and reducing toil.</div>
               </div>
@@ -1270,7 +1379,7 @@
             <div class="contact-card">
               <div class="contact-avatar">ES</div>
               <div class="contact-info">
-                <div class="contact-name">Eric Sager</div>
+                <div class="contact-name">Eric Sager <a href="https://www.linkedin.com/in/eric-sager-a529516" target="_blank" class="li-link">in</a></div>
                 <div class="contact-title">COO</div>
                 <div class="contact-role-desc">Economic buyer — at 1,300 employees, the COO oversees internal operations and controls budget.</div>
               </div>
@@ -1279,7 +1388,7 @@
             <div class="contact-card">
               <div class="contact-avatar">WR</div>
               <div class="contact-info">
-                <div class="contact-name">Will Robinson</div>
+                <div class="contact-name">Will Robinson <a href="https://www.linkedin.com/in/dangerwillrobinson" target="_blank" class="li-link">in</a></div>
                 <div class="contact-title">CTO</div>
                 <div class="contact-role-desc">Side door — technical credibility; engineering leaders validate stack integration. Can fast-track internal buy-in.</div>
               </div>
@@ -1296,8 +1405,14 @@
           </div>
           <div id="plaid-champion" class="seq-panel active">
             <div class="touch-list">
-              <div class="touch-item"><div class="touch-day"><span class="day-num">1</span><span class="day-label">Day</span></div><div class="touch-content"><div class="touch-header"><span class="touch-channel ch-linkedin">LinkedIn</span><span class="touch-type">Connection Request</span></div><div class="touch-msg">Diana — as Head of Eng Ops at Plaid, you're at the intersection of engineering velocity and operational efficiency. I work with a product that's directly relevant to that challenge. Would love to connect.</div></div></div>
-              <div class="touch-item"><div class="touch-day"><span class="day-num">2</span><span class="day-label">Day</span></div><div class="touch-content"><div class="touch-header"><span class="touch-channel ch-email">Email</span><span class="touch-type">Cold Email #1</span></div><div class="touch-msg"><span class="subject">Subject: Engineering ops at Plaid's scale</span>Diana — when you're scaling a fintech platform that connects to every bank in America, your engineers shouldn't be waiting in IT ticket queues for tool access. Console is an AI agent that lives in Slack and resolves IT requests autonomously — with full compliance logging. Webflow hit 70–80% ticket deflection and their engineers reclaimed full days. Worth 15 minutes? Adam</div></div></div>
+              <div class="touch-item"><div class="touch-day"><span class="day-num">1</span><span class="day-label">Day</span></div><div class="touch-content"><div class="touch-header"><span class="touch-channel ch-linkedin">LinkedIn</span><span class="touch-type">Connection Request</span></div><div class="touch-msg">Diana — Plaid just hit $8B and is actively hiring. That means your eng ops team is onboarding people into systems that handle bank data, where every access grant is an audit event. I work with Console — we automate that entire workflow in Slack with compliance logging. Worth connecting.</div></div></div>
+              <div class="touch-item"><div class="touch-day"><span class="day-num">2</span><span class="day-label">Day</span></div><div class="touch-content"><div class="touch-header"><span class="touch-channel ch-email">Email</span><span class="touch-type">Cold Email #1</span></div><div class="touch-msg"><span class="subject">Subject: Every access grant at Plaid is an audit event</span>Diana — Plaid just crossed $8B and the hiring plan is in motion. Every new engineer needs tool access, environment credentials, and system permissions — and in fintech, every one of those is a compliance event that needs a clean audit trail.
+
+Right now, that's manual work for your team. Console automates it — resolves access requests in Slack in seconds, with full compliance logging baked in. Webflow hit 70–80% ticket deflection and their engineers reclaimed full days of lost time.
+
+How is your team handling the provisioning load as headcount scales, or is it still manageable?
+
+Adam</div></div></div>
               <div class="touch-item"><div class="touch-day"><span class="day-num">4</span><span class="day-label">Day</span></div><div class="touch-content"><div class="touch-header"><span class="touch-channel ch-linkedin">LinkedIn</span><span class="touch-type">Engagement</span></div><div class="touch-action">Engage with Diana's content. Build visibility. No pitch.</div></div></div>
               <div class="touch-item"><div class="touch-day"><span class="day-num">6</span><span class="day-label">Day</span></div><div class="touch-content"><div class="touch-header"><span class="touch-channel ch-email">Email</span><span class="touch-type">Follow-Up #2</span></div><div class="touch-msg"><span class="subject">Subject: Re: Engineering ops at Plaid's scale</span>Diana — Scale AI has 7 IT staff supporting 1,000+ employees and hundreds of contractors. After implementing Console, they went from 15% to 57% automation and added only 1 IT hire despite 350+ employee growth. For a company at Plaid's stage — freshly funded, scaling headcount — that's the difference between hiring 3 more IT people and hiring zero. 15 minutes? Adam</div></div></div>
               <div class="touch-item"><div class="touch-day"><span class="day-num">8</span><span class="day-label">Day</span></div><div class="touch-content"><div class="touch-header"><span class="touch-channel ch-call">Phone</span><span class="touch-type">Cold Call</span></div><div class="touch-action">Reference the emails. "I sent you a couple of notes about Console and IT automation for Plaid. Worth a quick call?"</div></div></div>
@@ -1313,7 +1428,7 @@
           </div>
           <div id="plaid-economic" class="seq-panel">
             <div class="touch-list">
-              <div class="touch-item"><div class="touch-day"><span class="day-num">5</span><span class="day-label">Day</span></div><div class="touch-content"><div class="touch-header"><span class="touch-channel ch-linkedin">LinkedIn</span><span class="touch-type">Connection Request</span></div><div class="touch-msg">Eric — as COO at Plaid, you're scaling internal operations alongside a product that just hit $8B. Console helps companies like Scale AI and Webflow automate 50–80% of IT requests without scaling IT headcount. Would love to connect.</div></div></div>
+              <div class="touch-item"><div class="touch-day"><span class="day-num">5</span><span class="day-label">Day</span></div><div class="touch-content"><div class="touch-header"><span class="touch-channel ch-linkedin">LinkedIn</span><span class="touch-type">Connection Request</span></div><div class="touch-msg">Eric — Plaid just hit $8B and the headcount plan is in motion. Console helps companies at exactly this stage — Scale AI and Webflow automate 50–80% of IT requests without scaling IT headcount. Worth connecting.</div></div></div>
               <div class="touch-item"><div class="touch-day"><span class="day-num">9</span><span class="day-label">Day</span></div><div class="touch-content"><div class="touch-header"><span class="touch-channel ch-email">Email</span><span class="touch-type">Email #1</span></div><div class="touch-msg"><span class="subject">Subject: Scaling IT without scaling headcount</span>Eric — Plaid just crossed $8B. As you scale, your IT team shouldn't have to scale linearly with headcount. Console's customers absorb 20–50% headcount growth with zero new IT hires. Bloomerang's VP of IT put it well: "I didn't think it was possible to automate 50% of our tickets. But here we are." Worth 15 minutes to see how this fits at Plaid? Adam</div></div></div>
               <div class="touch-item"><div class="touch-day"><span class="day-num">12</span><span class="day-label">Day</span></div><div class="touch-content"><div class="touch-header"><span class="touch-channel ch-email">Email</span><span class="touch-type">Follow-Up</span></div><div class="touch-msg"><span class="subject">Subject: Re: Scaling IT without scaling headcount</span>Eric — brief follow-up. Scale AI added only 1 IT hire despite 350+ employee growth after implementing Console. Their Head of IT said the ROI was visible in staff hours within the first week. Happy to set up time whenever it makes sense. Adam</div></div></div>
             </div>
@@ -1340,7 +1455,8 @@
         </div>
         <div class="section-block">
           <div class="section-title">Why This Account, Why Now</div>
-          <div class="why-box">Notion's 1,217 employees are distributed across <strong>23 locations spanning 7 countries and nearly every time zone</strong>. This isn't a headcount problem — it's a structural complexity problem. IT requests come in at 3am Tokyo time when the San Francisco team is asleep. A new hire in Dublin needs access provisioned before their manager in New York is online.<br><br>A Slack-native AI agent that resolves IT requests autonomously — regardless of time zone — is <strong>more valuable at a globally distributed company than at a single-office company twice the size.</strong> Console removes the dependency on IT being awake and available in the right time zone, which is Notion's exact operational bottleneck as they scale globally.</div>
+          <div class="why-box">Notion's 1,217 employees are distributed across <strong>23 locations spanning 7 countries and nearly every time zone</strong>.<a href="https://www.clay.com/dossier/notion-headquarters-office-locations" target="_blank" class="source-link">src</a> This isn't a headcount problem — it's a structural complexity problem. IT requests come in at 3am Tokyo time when the San Francisco team is asleep. A new hire in Dublin needs access provisioned before their manager in New York is online.<br><br>A Slack-native AI agent that resolves IT requests autonomously — regardless of time zone — is <strong>more valuable at a globally distributed company than at a single-office company twice the size.</strong> Console removes the dependency on IT being awake and available in the right time zone, which is Notion's exact operational bottleneck as they scale globally.
+            <div class="sources-bar"><span class="src-label">Sources:</span><a href="https://www.clay.com/dossier/notion-headquarters-office-locations" target="_blank">Clay — Notion Office Locations</a><a href="https://www.unifygtm.com/insights-headcount/notion" target="_blank">Unify — Notion Headcount</a></div></div>
         </div>
         <div class="section-block">
           <div class="section-title">Target Contacts</div>
@@ -1348,7 +1464,7 @@
             <div class="contact-card">
               <div class="contact-avatar">DS</div>
               <div class="contact-info">
-                <div class="contact-name">Daniel S.</div>
+                <div class="contact-name">Daniel S. <a href="https://www.linkedin.com/in/daniel-p-71b47050" target="_blank" class="li-link">in</a></div>
                 <div class="contact-title">Head of Platform Security</div>
                 <div class="contact-role-desc">Economic buyer / decision maker — his teams include Information Technology. IT reports through security at Notion.</div>
               </div>
@@ -1383,8 +1499,16 @@
           </div>
           <div id="notion-champion" class="seq-panel active">
             <div class="touch-list">
-              <div class="touch-item"><div class="touch-day"><span class="day-num">1</span><span class="day-label">Day</span></div><div class="touch-content"><div class="touch-header"><span class="touch-channel ch-linkedin">LinkedIn</span><span class="touch-type">Connection Request</span></div><div class="touch-msg">Daniel — your team at Notion manages IT across 7 countries and 23 locations. That's a unique operational challenge. I work with a product that's directly relevant to how distributed companies handle IT at scale. Would love to connect.</div></div></div>
-              <div class="touch-item"><div class="touch-day"><span class="day-num">2</span><span class="day-label">Day</span></div><div class="touch-content"><div class="touch-header"><span class="touch-channel ch-email">Email</span><span class="touch-type">Cold Email #1</span></div><div class="touch-msg"><span class="subject">Subject: IT across 7 countries</span>Daniel — 1,200 employees across 7 countries means IT requests hit at 3am Tokyo time when your SF team is asleep. A new hire in Dublin needs access provisioned before their manager in New York is online. Console is an AI agent that lives in Slack and resolves those requests autonomously — regardless of time zone. Scale AI's 7-person IT team supports 1,000+ employees this way. Worth 15 minutes? Adam</div></div></div>
+              <div class="touch-item"><div class="touch-day"><span class="day-num">1</span><span class="day-label">Day</span></div><div class="touch-content"><div class="touch-header"><span class="touch-channel ch-linkedin">LinkedIn</span><span class="touch-type">Connection Request</span></div><div class="touch-msg">Daniel — 23 locations, 7 countries, and IT requests that don't wait for time zones. That's a structural problem, not a headcount problem. I work with Console — we solve exactly this for distributed companies. Worth connecting.</div></div></div>
+              <div class="touch-item"><div class="touch-day"><span class="day-num">2</span><span class="day-label">Day</span></div><div class="touch-content"><div class="touch-header"><span class="touch-channel ch-email">Email</span><span class="touch-type">Cold Email #1</span></div><div class="touch-msg"><span class="subject">Subject: IT requests at 3am Tokyo time</span>Daniel — a password reset at 3am Tokyo time. An access request in Dublin before the SF team is awake. A new hire in Hyderabad who needs tool provisioning on day one but their manager is 10 hours behind.
+
+These aren't edge cases at Notion's scale — they're the daily reality of running IT across 23 locations in 7 countries. Hiring more IT staff in more time zones is one answer. Automating the routine requests so time zones don't matter is another.
+
+Console resolves IT requests autonomously in Slack — 24/7, regardless of who's online. Scale AI's 7-person IT team supports 1,000+ employees this way.
+
+How is your team currently covering off-hours IT requests across regions?
+
+Adam</div></div></div>
               <div class="touch-item"><div class="touch-day"><span class="day-num">4</span><span class="day-label">Day</span></div><div class="touch-content"><div class="touch-header"><span class="touch-channel ch-linkedin">LinkedIn</span><span class="touch-type">Engagement</span></div><div class="touch-action">Engage with Daniel's content. Build visibility. No pitch.</div></div></div>
               <div class="touch-item"><div class="touch-day"><span class="day-num">6</span><span class="day-label">Day</span></div><div class="touch-content"><div class="touch-header"><span class="touch-channel ch-email">Email</span><span class="touch-type">Follow-Up #2</span></div><div class="touch-msg"><span class="subject">Subject: Re: IT across 7 countries</span>Daniel — quick follow-up. Webflow hit 70–80% ticket deflection with Console, peaking at 87%. Their IT Support Engineer said: "Within 3–4 days, we had our decision. This actually works." For a globally distributed team like Notion's, that automation runs 24/7 — no coverage gaps. Adam</div></div></div>
               <div class="touch-item"><div class="touch-day"><span class="day-num">8</span><span class="day-label">Day</span></div><div class="touch-content"><div class="touch-header"><span class="touch-channel ch-call">Phone</span><span class="touch-type">Cold Call</span></div><div class="touch-action">Reference the emails. "I sent you a couple of notes about Console and IT across Notion's global offices. Worth a quick call?"</div></div></div>
@@ -1394,7 +1518,7 @@
           <div id="notion-sidedoor" class="seq-panel">
             <div class="touch-list">
               <div class="touch-item"><div class="touch-day"><span class="day-num">3</span><span class="day-label">Day</span></div><div class="touch-content"><div class="touch-header"><span class="touch-channel ch-linkedin">LinkedIn</span><span class="touch-type">Connection + Message</span></div><div class="touch-action">Personalized message referencing the challenge of handling IT requests across Dublin, Hyderabad, Tokyo, and Sydney. "What if the routine ones — password resets, access requests, tool provisioning — resolved themselves before you saw them?"</div></div></div>
-              <div class="touch-item"><div class="touch-day"><span class="day-num">7</span><span class="day-label">Day</span></div><div class="touch-content"><div class="touch-header"><span class="touch-channel ch-email">Email</span><span class="touch-type">Follow-Up</span></div><div class="touch-action">Follow-up with Bloomerang proof point: 50–60% ticket deflection, zero new IT hires despite 20% growth. Angle: the IT manager's day gets better when routine requests resolve themselves overnight.</div></div></div>
+              <div class="touch-item"><div class="touch-day"><span class="day-num">7</span><span class="day-label">Day</span></div><div class="touch-content"><div class="touch-header"><span class="touch-channel ch-email">Email</span><span class="touch-type">Follow-Up</span></div><div class="touch-action">Follow-up with Bloomerang proof point: 60% ticket deflection, zero new IT hires despite 20% growth. Angle: the IT manager's day gets better when routine requests resolve themselves overnight.</div></div></div>
               <div class="touch-item"><div class="touch-day"><span class="day-num">11</span><span class="day-label">Day</span></div><div class="touch-content"><div class="touch-header"><span class="touch-channel ch-call">Phone</span><span class="touch-type">Cold Call</span></div><div class="touch-action">Reference previous touches. Direct ask for 15 minutes. Anchor to the time zone complexity angle.</div></div></div>
             </div>
           </div>
