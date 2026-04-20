@@ -1559,6 +1559,8 @@ Adam</div></div></div>
     const panelId = id === 'overview' ? 'panel-overview' : `panel-${id}`;
     document.getElementById(panelId).classList.add('active');
 
+    window.scrollTo(0, 0);
+
     if (navEl) {
       navEl.classList.add('active');
     } else {
