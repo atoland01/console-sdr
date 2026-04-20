@@ -227,7 +227,7 @@
   .signal-pill.geographic { background: rgba(186,104,200,0.1); border-color: rgba(186,104,200,0.3); color: #ba68c8; }
 
   /* MAIN NAV + CONTENT */
-  .main { display: flex; min-height: 600px; }
+  .main { display: flex; min-height: 600px; position: relative; }
 
   .account-nav {
     width: 220px;
@@ -237,6 +237,8 @@
     position: sticky;
     top: 0;
     align-self: start;
+    max-height: 100vh;
+    overflow-y: auto;
   }
 
   .nav-section-label {
@@ -814,7 +816,7 @@
     .hero { padding: 40px 24px 32px; grid-template-columns: 1fr; gap: 32px; }
     .signal-legend { padding: 16px 24px; flex-wrap: wrap; gap: 8px; }
     .main { flex-direction: column; }
-    .account-nav { width: 100%; border-right: none; border-bottom: 1px solid var(--border); padding: 16px 0; position: static; display: flex; overflow-x: auto; }
+    .account-nav { width: 100%; border-right: none; border-bottom: 1px solid var(--border); padding: 12px 0; position: sticky; top: 0; z-index: 100; background: var(--bg); display: flex; overflow-x: auto; -webkit-overflow-scrolling: touch; }
     .nav-section-label { display: none; }
     .nav-item { padding: 10px 16px; border-left: none; border-bottom: 2px solid transparent; white-space: nowrap; }
     .nav-item.active { border-left: none; border-bottom-color: var(--accent); }
@@ -1559,7 +1561,11 @@ Adam</div></div></div>
     const panelId = id === 'overview' ? 'panel-overview' : `panel-${id}`;
     document.getElementById(panelId).classList.add('active');
 
-    window.scrollTo(0, 0);
+    // Scroll to top – covers both viewport scroll and any scrollable container
+    window.scrollTo({ top: 0, behavior: 'instant' });
+    document.querySelector('.content').scrollTop = 0;
+    document.documentElement.scrollTop = 0;
+    document.body.scrollTop = 0;
 
     if (navEl) {
       navEl.classList.add('active');
